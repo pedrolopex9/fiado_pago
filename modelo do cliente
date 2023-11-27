@@ -1,0 +1,41 @@
+impor java.util.Calendar;
+
+public class ClienteModel{
+privete int clicodigo;
+privete int baicodigo;
+private int logcoidgo;
+private int cidcodigo;
+private String clinome;
+private String clinumero;
+private String clicomplemento;
+
+public int getClicodigo() {
+return cliecodigo();
+
+}
+
+public void setClicodigo(int clicodigo){
+this.clicodigo = clicodigo;
+}
+public int getBaicodigo(){
+return baicodigo;
+}
+public void setBaicodigo(int baicodigo){
+this.baicodigo = baicodigo;
+}
+public int getLogcodigo(){
+return logcodigo;
+}
+public void setLogcodigo(int logcodigo){
+this.logcodigo = logcodigo;
+}
+public char getClisexo(){
+this.clisexo = clisexo
+}
+
+private Calendar clidatanasc;
+private String clifone;
+private String cliemail;
+private char clisexo;
+}
+}
