@@ -1,0 +1,46 @@
+import java.sql.sonnection;
+import java.sql.preparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.logging.level;
+import java.util.logging.logger;
+
+
+public class ClienteDao{
+
+private Connection connection;
+
+public clienteDao(){
+this.connection = new ConnectionFactory().getConnection();
+}
+
+public list getListaCliente(int pagina,String odernacao, string pesquisa, string campopesquisar) throws SQLException{
+
+int limite = 10;
+int offset = (pagina * limite) - limite;
+string sql = "";
+
+
+if (campopesquisar.equals("codigoCliente")){
+if (pesquisa.equal("")){
+sql = "selec" from cliente where "+campopesquisar+" > 0 order by "ordenacao"+else
+sql = "select * from bairro where "+campopesquisar+" = " + pesquisa + "%" order preparedStatamente ps = null;
+resultSet resultset = null;
+list<Clientes> Clientes = new ArrayList <Clientes> ();
+try{
+ps = connection.prepareStatement(sql);
+resultSet = ps.executeQuery();
+while (resultSet.next()) {
+Cliente cliente = new Cliente ():
+Cliente.setCodigo(resultSet.getInt("CodigoCliente"));
+Cliente.setClienteDescricao(resultSet.getString("DescricaoCliente");
+listaCliente.add(cliente);
+}
+return listaCliente;
+}
+catch (SQLExepciton ex {
+logger.getLogger(Cliente.class.getName()).log(leve.SEVERE, null, ex);
+}
+finally {
+
