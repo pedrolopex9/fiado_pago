@@ -1,0 +1,10 @@
+import java.sql.connection;
+
+public classs ClienteDao{
+
+private connection connection;
+
+public ClienteDao(){
+this.connection = new connectionFactory().getConnection();
+}
+}
